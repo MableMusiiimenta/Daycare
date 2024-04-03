@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayStar Daycare Management</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 20px;
+}
+
+.sidebar-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.sidebar-nav {
+    padding-top: 20px;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.metric {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>DayStar</h1>
+            <p>Daycare Management</p>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#manage-sitters">Manage Sitters</a></li>
+                <li><a href="#manage-babies">Manage Babies</a></li>
+                <li><a href="#record-payments">Record Payments</a></li>
+                <li><a href="#procurement-corner">Procurement Corner</a></li>
+                <li><a href="#reporting">Reporting</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    
+    <main class="main-content">
+       
+        <header class="header">
+            <h1>Dashboard</h1>
+        </header>
+
+        
+        <section id="dashboard" class="content">
+            <div class="container">
+               
+                <div class="grid">
+                    <div class="metric">
+                        <h3>Daily Attendance</h3>
+                        <p>150 babies</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Payments Received</h3>
+                        <p>UGX 50,000</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Procurement Status</h3>
+                        <p>Dolls: 20, Fruits: 50, Milk: 30</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DayStar Daycare</p>
+        </div>
+    </footer>
+</body>
+</html>

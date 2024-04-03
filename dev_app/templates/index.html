@@ -1,0 +1,86 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg gray-bg" data-bs-theme="dark">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand" href="/">
+        <img src= "../static/images/badge.png"alt="badge" class="logo-img">
+      <h1 style="margin-left: 500px;">DAY-STAR DAYCARE CENTER</h1>
+        
+        <div class="dropdown">
+          <button class="dropdown-button " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+           LOGIN
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/admin">Admin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="k">
+      <div class="col-md-6">
+        <div class="card custom-card" style="height: 500px;">
+          <div class="card-body">
+            <h1>
+              <span class="icon">🔒</span>SIGN IN
+            </h1>
+            {% block content %}
+            <form id="form" method="POST">
+              {% csrf_token %}
+              {{ form | crispy}}
+              <input type="submit" name="Submit" class="btn btn-warning btn-block" value="Sign In">
+              <br>
+            </form>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer">
+      <p>"A Mother's Love"</p>
+      <div class="social-links">
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="text-center mt-3">
+        &copy; Copyright <strong><span>
+            <script>document.write(new Date().getFullYear())</script> DAY-STAR DAYCARE
+          </span></strong>
+      </div>
+      <div class="credits">
+        Designed by MABLE MUSIIMENTA
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
